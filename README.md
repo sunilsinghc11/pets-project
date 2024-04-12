@@ -18,22 +18,29 @@ Once Logged in Click on Dashboard to view the pipeline
 ```
 ## Jenkins Pipeline
 <img width=“1042” alt=“petclinic-pipeline” src="https://github.com/sunilsinghc11/pets-project/blob/main/pipeline.png">
-```bash
-To Clone the Repo Locally
+This Pipeline Execuetion, would compile the code, test, upload the artifact to Artifactory Repository and then Build a Docker Image.
+
+## To Clone the Repo Locally
+```
 git clone https://github.com/sunilsinghc11/pets-project.git
 cd pets-project
-
 ```
-Files used for Setting up the CICD Process.
-    [Jenkinsfile](https://github.com/sunilsinghc11/pets-project/blob/main/Jenkinsfile).
-    [Dockerfile](https://github.com/sunilsinghc11/pets-project/blob/main/Dockerfile).
-    Maven Settings to Configure Artifactory Repository Server 
-        [settings.xml](https://github.com/sunilsinghc11/pets-project/blob/main/settings.xml)
-        pom.xml change upload artifact
-        (https://github.com/sunilsinghc11/pets-project/blob/main/pom.xml)
-Pipeline Execuetion, would compile the code, test, upload the artifact to Artifactory Repository and then Build a Docker Image.
+## Files used for Setting up the CICD Process.
+
+[Jenkinsfile](https://github.com/sunilsinghc11/pets-project/blob/main/Jenkinsfile).
+
+[Dockerfile](https://github.com/sunilsinghc11/pets-project/blob/main/Dockerfile).
+
+## Maven Settings to Configure Artifactory Repository Server 
+
+[settings.xml](https://github.com/sunilsinghc11/pets-project/blob/main/settings.xml)
+
+[pom.xml](https://github.com/sunilsinghc11/pets-project/blob/main/pom.xml) . Updates to add jFrog Artifactory to upload Build artifact
+
+
 
 The Docker Image to Pull:
+
 ```
 docker pull sunilsc/petclinic
 docker run -d -p 8080:8080 docker pull sunilsc/petclinic
