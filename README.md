@@ -41,9 +41,10 @@ cd pets-project
 The Docker Image to Pull:
 
 <img width=“1042” alt=“petclinic-run” src="https://github.com/sunilsinghc11/pets-project/blob/main/docker-hub.png">
+
 ```
 docker pull sunilsc/petclinic
-docker run -d -p 8080:8080 docker pull sunilsc/petclinic
+docker run -d -p 8080:8080 sunilsc/petclinic
 ```
 
 1. Navigate to the Petclinic
