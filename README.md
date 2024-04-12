@@ -4,20 +4,19 @@
 
 ## CICD for the Spring Petclinic application
 
-[See the presentation here](https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application)
-
-## Pre-requisites to Run Petclinic CICD
 
 Spring Petclinic is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built using [Maven](https://spring.io/guides/gs/maven/) .
 
-``` 
+
 CICD Pipeline can be executed by logging into the Jenkins Server.
+``` 
 Jenkins URL http://35.90.13.23:8080/
-Login with user admin and password provided seperately.
-Once Logged in Click on Dashboard to view the pipeline
 ```
 ## Jenkins Pipeline
 <img width=“1042” alt=“petclinic-pipeline” src="https://github.com/sunilsinghc11/pets-project/blob/main/pipeline.png">
+<img width=“1042” alt=“petclinic-run” src="https://github.com/sunilsinghc11/pets-project/blob/main/pipeline-run.png">
+<img width=“1042” alt=“petclinic-run” src="https://github.com/sunilsinghc11/pets-project/blob/main/artifactory-run.png">
+
 This Pipeline Execuetion, would compile the code, test, upload the artifact to Artifactory Repository and then Build a Docker Image.
 
 ## To Clone the Repo Locally
@@ -41,6 +40,7 @@ cd pets-project
 
 The Docker Image to Pull:
 
+<img width=“1042” alt=“petclinic-run” src="https://github.com/sunilsinghc11/pets-project/blob/main/docker-hub.png">
 ```
 docker pull sunilsc/petclinic
 docker run -d -p 8080:8080 docker pull sunilsc/petclinic
